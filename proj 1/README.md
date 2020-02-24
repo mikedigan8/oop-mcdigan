@@ -34,13 +34,6 @@
 - Defaults:
   - Creating an instance of a guitar with no constructor arguments
   - Making sure that the default constructor applies the default values for all attributes
-- Bad Values:
-  - Creating an instance of a guitar with purposfully bad arguments
-  - Making sure the object catches:
-    - Negative string counts
-    - Negative volumes
-    - Volumes greater than ten
-    - Acceptable tunings
-- Specifics:
-  - Creating an instance of a guitar with specific values
+- Setters
   - Making sure that the attributes can be changed with the setter methods
+  - Ensuring that the attributes still only allow acceptable arguments
