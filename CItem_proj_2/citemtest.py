@@ -1,34 +1,36 @@
 import unittest
 
 from citem import CItem
-
+from mask import Mask
+from weapon import Weapon
 from typing import List
 
 class CItemTest(unittest.TestCase):
 
     def testInitializer(self):
-        citem = CItem("Bow")
+        citem = CItem("Bottle")
         #testing all defaults
-        self.assertEqual(citem.name, "Bow")
+        self.assertEqual(citem.name, "Bottle")
         self.assertEqual(citem.acquired, False)
         self.assertEqual(citem.cApplied, "none")
         self.assertEqual(citem.inUse, False)
 
         #testing to make sure you can't assign C direction to a bad location
-        citem2 = CItem("Bomb bag",True,"up",True)
+        citem2 = CItem("Seeds",True,"up",True)
         self.assertEqual(citem2.acquired, True)
         self.assertEqual(citem2.cApplied, "none")
         self.assertEqual(citem2.inUse, False)
 
         #testing that you can set an item to be in use if it's been acquired and assigned to a good location
-        citem3 = CItem("Slingshot",True, "down", True)
+        citem3 = CItem("Moon Tear",True, "down", True)
         self.assertEqual(citem3.acquired, True)
         self.assertEqual(citem3.cApplied, "down")
         self.assertEqual(citem3.inUse, True)   
 
     def testSetters(self):
-        citem = CItem("Bombchu")
+        citem = CItem("Title Deed")
         citem.using()
+        
         #testing to make sure you can't use an unacquired item
         self.assertEqual(citem.acquired, False)
         self.assertEqual(citem.inUse, False)
