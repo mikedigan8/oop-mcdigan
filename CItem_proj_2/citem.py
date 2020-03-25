@@ -1,10 +1,9 @@
 from typing import List
 
 class CItem:
-    DEFAULT_DIRECTION: str = "none"
     ACCEPTABLE_DIRECTIONS: List[str] = ["left", "right", "down", "none"]
 
-    def __init__(self, name: str, acquired: bool = False, cApplied: str = DEFAULT_DIRECTION, inUse: bool = False):
+    def __init__(self, name: str, acquired: bool = False, cApplied: str = "none", inUse: bool = False):
         self._name = name
         self._acquired = acquired
         if cApplied not in self.ACCEPTABLE_DIRECTIONS or self._acquired == False:
