@@ -4,9 +4,6 @@ namespace item {
     const int Weapon::DEFAULT_BAG_SIZE = 20;
     const int Weapon::DEFAULT_QUANTITY = 0;
 
-    int bagSize;
-    int quantity;
-
     Weapon::Weapon(std::string _name, int _bagSize, int _quantity)
         : CItem(_name), bagSize(_bagSize), quantity(_quantity)
     {
