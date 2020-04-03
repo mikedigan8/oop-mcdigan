@@ -25,3 +25,4 @@ Repository for projects
 
 #### Links to Projects:
 - [**Python Object:**](https://github.com/mikedigan8/oop-mcdigan/tree/master/CItem_proj_2)
+- [**C++ Object:**](https://github.com/mikedigan8/oop-mcdigan/tree/master/CItem_proj_2_cpp)
