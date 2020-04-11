@@ -7,9 +7,7 @@ package com.mycompany.patternproject;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 import java.util.ListIterator;
-import java.util.function.Consumer;
 
 
 public class IteratorPattern {
@@ -30,14 +28,6 @@ public class IteratorPattern {
         Student joe = new Student("Joe","Dirt",1964,6789);
         students.add(joe);
     }
-    public static void TraverseArray() {
-        Iterator<Student> classes = students.iterator();
-        Student tempStu = new Student();
-        while(classes.hasNext()) {
-            tempStu = classes.next();
-            System.out.println(tempStu.lastName + ", " + tempStu.firstName + " ID no. " + tempStu.id + " born in " + tempStu.birthYear);
-        }
-    }
     
     public static void AddMoreStudents() {
         Student margo = new Student("Margo","Hayes",1998);
@@ -48,17 +38,27 @@ public class IteratorPattern {
         students.add(roger);
     }
     
+    public static void TraverseArray() {
+        Iterator<Student> classes = students.iterator();
+        Student tempStu = new Student();
+        while(classes.hasNext()) {
+            tempStu = classes.next();
+            System.out.println(tempStu.lastName + ", " + tempStu.firstName + " ID no. " 
+                    + tempStu.id + " born in " + tempStu.birthYear);
+        }
+    }
+    
     public static void ReverseTraverse() {
         ListIterator<Student> classes = students.listIterator();
         Student tempStu = new Student();
         while(classes.hasNext()) {
-            tempStu = classes.next();
+            classes.next();
         }
 
         while(classes.hasPrevious()) {
             tempStu = classes.previous();
-            System.out.println(tempStu.lastName + ", " + tempStu.firstName + " ID no. " + tempStu.id + " born in " + tempStu.birthYear);
-
+            System.out.println(tempStu.lastName + ", " + tempStu.firstName + " ID no. " 
+                    + tempStu.id + " born in " + tempStu.birthYear);
         }
     }    
     
@@ -74,16 +74,31 @@ public class IteratorPattern {
         }
     }
     
+    public static boolean HasIds() {
+        Iterator<Student> classes = students.iterator();
+        Student tempStu = new Student();
+        while(classes.hasNext()) {
+            tempStu = classes.next();
+            if(tempStu.id == -1) return false;
+        }
+        return true;
+    }
+    
+    public static Student GetStudent(int id) {
+        Student tempStu = new Student();
+        Iterator<Student> stu = students.iterator();
+        while(stu.hasNext()) {
+            tempStu = stu.next();
+            if(tempStu.id == id) break;
+        }
+        return tempStu;
+    }
+    
     public static void main(String [] args) {
         MakeList();
         TraverseArray();
         for(int i = 0; i < 50; i++) System.out.print('-');
         System.out.println("\n \n");
         ReverseTraverse();
-        for(int i = 0; i < 50; i++) System.out.print('-');
-        System.out.println("\n \n");
-        AddMoreStudents();
-        EachRemaining();
-        TraverseArray();
     }
 }

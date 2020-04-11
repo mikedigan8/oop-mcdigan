@@ -38,9 +38,21 @@ public class IteratorPatternTest {
     }
 
     @Test
-    public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+    public void testGetStudent() {
+        IteratorPattern.MakeList();
+        Student stu = IteratorPattern.GetStudent(1234);
+        String expected = "Mike";
+        assertEquals(expected,stu.firstName);   
+
     }
     
+    @Test
+    public void testEachRemaining() {
+        IteratorPattern.MakeList();
+        assertEquals(true,IteratorPattern.HasIds());
+        IteratorPattern.AddMoreStudents();
+        assertEquals(false,IteratorPattern.HasIds());
+        IteratorPattern.EachRemaining();
+        assertEquals(true,IteratorPattern.HasIds());
+    }
 }
