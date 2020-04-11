@@ -86,12 +86,18 @@ public class IteratorPattern {
     
     public static Student GetStudent(int id) {
         Student tempStu = new Student();
+        Student empty = new Student();
         Iterator<Student> stu = students.iterator();
         while(stu.hasNext()) {
             tempStu = stu.next();
-            if(tempStu.id == id) break;
+            if(tempStu.id == id) return tempStu;
         }
-        return tempStu;
+        return empty;
+    }
+    
+    public static void RemoveStudent(int id) {
+        Student tempStu = GetStudent(id);
+        if(tempStu.id != -1) students.remove(tempStu);
     }
     
     public static void main(String [] args) {
@@ -100,5 +106,22 @@ public class IteratorPattern {
         for(int i = 0; i < 50; i++) System.out.print('-');
         System.out.println("\n \n");
         ReverseTraverse();
+        for(int i = 0; i < 50; i++) System.out.print('-');
+        System.out.println("\n \n");
+        AddMoreStudents();
+        TraverseArray();
+        for(int i = 0; i < 50; i++) System.out.print('-');
+        System.out.println("\n \n");
+        EachRemaining();
+        TraverseArray();
+        for(int i = 0; i < 50; i++) System.out.print('-');
+        System.out.println("\n \n");
+        Student tempStu = GetStudent(5678);
+        System.out.println(tempStu.lastName + ", " + tempStu.firstName + " ID no. " 
+                    + tempStu.id + " born in " + tempStu.birthYear);
+        for(int i = 0; i < 50; i++) System.out.print('-');
+        System.out.println("\n \n");
+        RemoveStudent(1234);
+        TraverseArray();
     }
 }

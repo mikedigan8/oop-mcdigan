@@ -55,4 +55,11 @@ public class IteratorPatternTest {
         IteratorPattern.EachRemaining();
         assertEquals(true,IteratorPattern.HasIds());
     }
+    
+    @Test
+    public void testRemoveStudent() {
+        IteratorPattern.MakeList();
+        IteratorPattern.RemoveStudent(1234);
+        assertEquals("NONE",IteratorPattern.GetStudent(1234).firstName);
+    }
 }
