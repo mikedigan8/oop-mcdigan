@@ -10,7 +10,7 @@
 
 <br>
 
-## Description of the Student Class
+### Description of the Student Class
 ---
 - There are three different constructors
   - Default:
