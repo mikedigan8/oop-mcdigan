@@ -10,8 +10,8 @@ Repository for projects
 - Create the same object in C++ and verify it works using tests.
 
 #### Links to Projects:
-- [**Python Object:**](https://github.com/mikedigan8/oop-mcdigan/tree/master/proj%201)
-- [**C++ Object:**](https://github.com/mikedigan8/oop-mcdigan/tree/master/proj_1_cpp)
+- [**Python Object**](https://github.com/mikedigan8/oop-mcdigan/tree/master/proj%201)
+- [**C++ Object**](https://github.com/mikedigan8/oop-mcdigan/tree/master/proj_1_cpp)
 
 
 ## Project 2
@@ -24,5 +24,16 @@ Repository for projects
 - Verity it works using tests
 
 #### Links to Projects:
-- [**Python Hierarchy :**](https://github.com/mikedigan8/oop-mcdigan/tree/master/CItem_proj_2)
-- [**C++ Hierarchy :**](https://github.com/mikedigan8/oop-mcdigan/tree/master/CItem_proj_2_cpp)
+- [**Python Hierarchy**](https://github.com/mikedigan8/oop-mcdigan/tree/master/CItem_proj_2)
+- [**C++ Hierarchy**](https://github.com/mikedigan8/oop-mcdigan/tree/master/CItem_proj_2_cpp)
+
+## Project 3
+----------
+
+### Description:
+  - Pick a design pattern and implement in a language of your choice
+  - Create tests to make sure the pattern is working properly
+  
+#### Link to Project:
+- [**Iterator Patern**](https://github.com/mikedigan8/oop-mcdigan/tree/master/PatternProject)
+
