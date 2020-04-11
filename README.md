@@ -24,4 +24,5 @@ Repository for projects
 - Verity it works using tests
 
 #### Links to Projects:
-- [**Python Object:**](https://github.com/mikedigan8/oop-mcdigan/tree/master/CItem_proj_2)
+- [**Python Hierarchy :**](https://github.com/mikedigan8/oop-mcdigan/tree/master/CItem_proj_2)
+- [**C++ Hierarchy :**](https://github.com/mikedigan8/oop-mcdigan/tree/master/CItem_proj_2_cpp)
