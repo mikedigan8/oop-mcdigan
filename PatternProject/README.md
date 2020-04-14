@@ -52,3 +52,10 @@
   - Tests that I can add more students without ID values and add some using the ForEachRemaining method
 - testRemoveStudent
   - Makes sure that the RemoveStudent function infact does remove the correct student
+  
+  <br>
+  
+  ## Links for presentation:
+  ---
+  - [**YouTube Video**](https://youtu.be/HHFTBWZTV2E)
+  - [**Slide Show**](https://docs.google.com/presentation/d/1F8mTK-zTXAjGml5EA6-v-S0cTOtOhOO2RYL3RNizG3g/edit?usp=sharing)
