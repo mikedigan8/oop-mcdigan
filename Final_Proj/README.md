@@ -1,4 +1,4 @@
-# Project 2: Final Project
+# Final Project
 
 <br>
 <br>
