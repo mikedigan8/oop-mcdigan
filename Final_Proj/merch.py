@@ -2,7 +2,7 @@ from inventory import Inventory
 
 class Merch(Inventory):
     def __init__(self, name : str, cost : float, quantity : int, sellPrice : float, inProcess : int = 0):
-        super(Merch, self).__init__(name, cost, quantity)
+        super(Merch, self).__init__(name, cost, quantity - inProcess)
         if sellPrice < 0.0:
             sellPrice = 0.0
         self._sellPrice = sellPrice
@@ -27,7 +27,7 @@ class Merch(Inventory):
 
     def finishGoods(self, amount : int) -> None:
         if amount > self._inProcess:
-            amount = self._merchList[name].inProcess
+            amount = self._inProcess
         self._quantity += amount
         self._inProcess -= amount
 
@@ -42,4 +42,4 @@ class Merch(Inventory):
     def getCash(self, amount : int) -> float:
         if amount > self._quantity:
             amount = self._quantity
-        return self._cost * amount
+        return self._sellPrice * amount

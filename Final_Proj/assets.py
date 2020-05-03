@@ -62,7 +62,10 @@ class Assets:
     def buyMerch(self, name : str, quantity : int) -> None:
         if quantity > 0:
             self._merchList[name].buyMore(quantity)
-            self._cash -= self._suppliesList[name].cost * quantity
+            self._cash -= self._merchList[name].cost * quantity
+
+    def newSellPrice(self, name : str, price : float) -> None:
+        self._merchList[name].setSellPrice(price)
 
     def expenseSupplies(self, name : str, amount : int) -> None:
         self._supplies -= self._suppliesList[name].getExpense(amount)
@@ -84,23 +87,3 @@ class Assets:
             amount = self._accRec
         self._cash += amount
         self._accRec -= amount
-
-
-    def getAssets(self) -> None:
-        print("Cash: ", self._cash)
-        print("Accounts Receivable: ", self._accRec)
-        print("Supplies: ", self._supplies)
-        print("-----------------------------------")
-        print("Inventory Breakdown")
-        for i in self._inventoryList:
-            print(i, ": ", self._inventoryList[i].quantity * self._inventoryList[i].cost)
-        print("-----------------------------------")
-        print("Supplies Breakdown")
-        for i in self._suppliesList:
-            print(i, ": ", self._suppliesList[i].quantity * self._suppliesList[i].cost)
-        print("-----------------------------------")
-        print("Merchandise Breakdown")
-        for i in self._merchList:
-            print(i, ": ", self._merchList[i].quantity * self._merchList[i].cost)
-
-        print("\n \n")
