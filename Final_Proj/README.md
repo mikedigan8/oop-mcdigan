@@ -5,8 +5,8 @@
 
 ## Assignment
 ---
-- Create a super class from which other classes will inherit
-- Create two sub classes with unique properties
+- Create an object oriented hierarchy
+- Use OOP concepts like polymorphism and inheritance
 - Implement a design pattern
 
 <br>
@@ -69,9 +69,26 @@
 - Initializer:
   - Making sure that the assets class initializer is properly working
 - Inventory:
-  - Making sure the cash is properly being recorded as transactions take place
-    - 
-- Merchandise:
-  - M
+  - Making sure the cash and inventory accounts are being properly recorded as transactions take place
+  - The transactions:
+    - Set up two accounts for internal inventory, computer and chairs
+    - Purchase more chairs
 - Supplies:
-  - M
+  - Making sure the cash and supplies accounts are being properly recorded as transactions take place
+  - The transactions:
+    - Set up two accounts for the supplies, pens and sticky notes
+    - Put some of the pens and sticky notes to use
+    - Expense some of the pens and sticky notes
+    - Buy more pens
+- Merchandise:
+  - Making sure the cash, accounts receivable, and merchandise accounts are all being properly recorded
+  - The Transactions:
+    - Set up two accounts for the merchandise, bread and cookies
+    - Sell some of the bread and cookies
+    - Move some of the in process goods to finished product
+    - Sell bread on credit and cookies on cash
+    - Collect some of the accounts receivable
+    - Change the selling price of the bread
+    - Buy in process materials for bread and cookies
+    - Move some of the in process bread to finished product
+    - Sell some of the bread

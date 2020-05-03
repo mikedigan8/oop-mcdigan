@@ -43,3 +43,8 @@ class Merch(Inventory):
         if amount > self._quantity:
             amount = self._quantity
         return self._sellPrice * amount
+
+    def getCost(self, amount : int) -> float:
+        if amount > self._quantity:
+            amount = self._quantity
+        return self._cost * amount
