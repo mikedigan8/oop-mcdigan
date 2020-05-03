@@ -24,5 +24,4 @@ class Inventory:
         return self._quantity
 
     def buyMore(self, amount : int) -> None:
-        if amount > 0:
-            self._quantity += amount
+        self._quantity += amount

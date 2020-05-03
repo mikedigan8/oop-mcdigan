@@ -27,18 +27,19 @@ class Merch(Inventory):
 
     def finishGoods(self, amount : int) -> None:
         if amount > self._inProcess:
-            self._quantity += self._inProcess
-            self._inProcess = 0
-        else:
-            self._quantity += amount
-            self._inProcess -= amount
+            amount = self._merchList[name].inProcess
+        self._quantity += amount
+        self._inProcess -= amount
 
     def buyMore(self, amount : int) -> None:
         self._inProcess += amount
 
     def sellGoods(self, amount : int) -> None:
         if amount > self._quantity:
-            self._quantity = 0
-        else:
-            self._quantity -= amount
-    
+            amount = self._quantity
+        self._quantity -= amount
+
+    def getCash(self, amount : int) -> float:
+        if amount > self._quantity:
+            amount = self._quantity
+        return self._cost * amount

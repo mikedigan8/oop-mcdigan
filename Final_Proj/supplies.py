@@ -17,14 +17,16 @@ class Supplies(Inventory):
 
     def startUsing(self, amount : int) -> None:
         if amount > self._available:
-            self._using = self._quantity
-            self._available = 0
-        else:
-            self._using += amount
-            self._available -= amount
+            amount = self._available
+        self._using += amount
+        self._available -= amount
 
     def expense(self, amount : int) -> None:
         if amount > self._using:
-            self._using = 0
-        else:
-            self._using -= amount
+            amount = self._using
+        self._using -= amount
+
+    def getExpense(self, amount : int) -> float:
+        if amount > self._using:
+            amount = self._using
+        return self._cost * amount

@@ -65,27 +65,19 @@ class Assets:
             self._cash -= self._suppliesList[name].cost * quantity
 
     def expenseSupplies(self, name : str, amount : int) -> None:
-        if amount > self._suppliesList[name].using:
-            amount = self._suppliesList[name].using
-        self._supplies -= self._suppliesList[name].cost * amount
+        self._supplies -= self._suppliesList[name].getExpense(amount)
         self._suppliesList[name].expense(amount)
 
     def toFinishedGoods(self, name : str, amount : int) -> None:
-        if amount > self._merchList[name].inProcess:
-            amount = self._merchList[name].inProcess
         self._merchList[name].finishGoods(amount)
 
     def sellMerchOnCash(self, name : str, amount : int) -> None:
-        if amount > self._merchList[name].quantity:
-            amount = self._merchList[name].quantity
+        self._cash += self._merchList[name].getCash(amount)
         self._merchList[name].sellGoods(amount)
-        self._cash += self._merchList[name].sellPrice * amount
 
     def sellMerchOnCred(self, name : str, amount : int) -> None:
-        if amount > self._merchList[name].quantity:
-            amount = self._merchList[name].quantity
+        self._accRec += self._merchList[name].getCash(amount)
         self._merchList[name].sellGoods(amount)
-        self._accRec += self._merchList[name].sellPrice * amount
 
     def collectAccRec(self, amount : float) -> None:
         if amount > self._accRec:
